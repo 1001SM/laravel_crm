@@ -15,14 +15,6 @@ services:
     volumes:
       - ./docker/local/php/php.ini:/usr/local/php/php.ini
       - ./src:/var/www
-  node:
-    container_name: node
-    build: ./docker/local/node
-    volumes:
-      - ./src:/var/www
-    ports:
-      - "3000:3000"
-    tty: true
 
   db:
     container_name: db
